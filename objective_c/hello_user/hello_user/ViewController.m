@@ -20,9 +20,8 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)changeLabelText:(id)sender {
+    self.labelUserText.text = [NSString stringWithFormat:@"Hello %@", self.inputUser.text];
 }
 
 

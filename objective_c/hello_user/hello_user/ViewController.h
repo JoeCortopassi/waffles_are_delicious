@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-
+- (IBAction)changeLabelText:(id)sender;
+@property (nonatomic, strong) IBOutlet UILabel *labelUserText;
+@property (nonatomic, strong) IBOutlet UITextField *inputUser;
 @end
 

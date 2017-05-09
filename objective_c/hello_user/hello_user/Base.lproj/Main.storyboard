@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +17,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7s-Gs-l1d">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OEV-Wq-PC2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTk-p7-asr">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aUa-e4-3xr"/>
+                                    <constraint firstAttribute="width" constant="100" id="t1K-xi-E3i"/>
+                                </constraints>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="changeLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCz-oZ-wCG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PvE-BP-0Vc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1dz-1D-Wrf"/>
+                                    <constraint firstAttribute="height" constant="40" id="eiK-Uo-W7a"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a7s-Gs-l1d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4QY-8n-Z1T"/>
+                            <constraint firstItem="PvE-BP-0Vc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6mc-fq-rCj"/>
+                            <constraint firstItem="a7s-Gs-l1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dl5-Jw-bN3"/>
+                            <constraint firstItem="GTk-p7-asr" firstAttribute="top" secondItem="PvE-BP-0Vc" secondAttribute="bottom" constant="20" id="KiC-dB-OVl"/>
+                            <constraint firstItem="PvE-BP-0Vc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MOE-yy-52u"/>
+                            <constraint firstItem="a7s-Gs-l1d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="VCb-Qf-pHb"/>
+                            <constraint firstItem="GTk-p7-asr" firstAttribute="centerX" secondItem="PvE-BP-0Vc" secondAttribute="centerX" id="efO-od-KHq"/>
+                            <constraint firstAttribute="trailing" secondItem="a7s-Gs-l1d" secondAttribute="trailing" id="xS7-Wm-8d4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputUser" destination="PvE-BP-0Vc" id="wjM-UD-5l6"/>
+                        <outlet property="labelUserText" destination="a7s-Gs-l1d" id="lr5-KU-izo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
